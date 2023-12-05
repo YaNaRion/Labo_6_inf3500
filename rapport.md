@@ -37,22 +37,26 @@ Voici le nombre de ressources disponibles dans notre FPGA.
 
 Slice LUTs | Slice Registers | F7 Muxes | F8 Muxes | Bonded IOB
 ---------- | --------------- | -------- | -------- | ----------
-nombre? | nombre? | nombre? | nombre? | nombre?
+20800 | 41600 | 16300 | 8150 | 106
 
 Voici le nombre de ressources utilisées par le PolyRISC selon les valeurs demandées dans les instructions du labo.
 
 Nreg | Wd | Mi | Md | version du processeur | Slice LUTs | Slice Registers | F7 Muxes | F8 Muxes | Bonded IOB
 ---- | -- | -- | -- | --------------------- | ---------- | --------------- | -------- | -------- | ------------
-16   | 32 | 8  | 8  | version de base       | nombre?    | nombre?         | nombre?  | nombre?  | nombre?
-16   | 64 | 8  | 8  | version de base       | nombre?    | nombre?         | nombre?  | nombre?  | nombre?
-32   | 32 | 8  | 8  | version de base       | nombre?    | nombre?         | nombre?  | nombre?  | nombre?
-32   | 64 | 8  | 8  | version de base       | nombre?    | nombre?         | nombre?  | nombre?  | nombre?
-16   | 32 | 8  | 8  | version partie 1      | nombre?    | nombre?         | nombre?  | nombre?  | nombre?
-16   | 64 | 8  | 8  | version partie 1      | nombre?    | nombre?         | nombre?  | nombre?  | nombre?
-32   | 32 | 8  | 8  | version partie 1      | nombre?    | nombre?         | nombre?  | nombre?  | nombre?
-32   | 64 | 8  | 8  | version partie 1      | nombre?    | nombre?         | nombre?  | nombre?  | nombre?
+16   | 32 | 8  | 8  | version de base       | 292    | 197         | 0  | 0  | 68
+16   | 64 | 8  | 8  | version de base       | 555    | 389        | 0  | 0  | 132
+32   | 32 | 8  | 8  | version de base       | 290    | 197        | 0  | 0  | 68
+32   | 64 | 8  | 8  | version de base       | 555    | 389         | 0  | 0  | 132
+16   | 32 | 8  | 8  | version partie 1      | 489   | 262         | 96  | 32  | 68
+16   | 64 | 8  | 8  | version partie 1      | 1073    | 518         | 164  | 64  | 132
+32   | 32 | 8  | 8  | version partie 1      | 605    | 262         | 64  | 32  | 68
+32   | 64 | 8  | 8  | version partie 1      | 1213   | 518        | 138  | 64  | 132
 
 Commentez complètement vos résultats ici.
+
+On remarque que pour les versions où Wd est à la valeur 64, la synthèse demande plus de Bonded IOB que ce que la carte peut offrir. Il est donc impossible d'implémenter ce circuit en une seule FPGA Basys3.
+
+... 
 
 
 ## Partie 4 : Bonus
